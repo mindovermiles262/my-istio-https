@@ -1,0 +1,12 @@
+
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: my-cert
+  namespace: istio-system
+spec:
+  secretName: ingress-cert              
+  issuerRef:
+    name: my-issuer
+  dnsNames:
+  - tacoslinux.com
